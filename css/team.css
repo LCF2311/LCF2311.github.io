@@ -1,0 +1,68 @@
+/*
+Author : Nitesh Hebbare
+Date   : 5th December 2023
+
+*/
+article {
+    margin: 20px;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h4 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: #555;
+    text-align: center;
+    font-size : 1.25em;
+}
+
+section figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.aboutimg {
+    width: 25vw;
+    height: 30vh; 
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #777;
+    font-size : 1.25em;
+}
+
+
+#team h1,#team h4{
+    text-align: center;
+}

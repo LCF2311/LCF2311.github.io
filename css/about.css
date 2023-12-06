@@ -1,0 +1,161 @@
+/*
+Author : Nitesh Hebbare
+Date   : 5th December 2023
+
+*/
+
+/* Media Query for Tablet Viewport*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /*Tablet Viewport: Show tab-desk class, hide mobile class*/
+    .tab-desk{
+        display: block;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: none;
+    }
+    /*Tablet Viewport: Style for header content*/
+    span.tab-desk{
+        display: inline;
+    }
+    /* Table Viewport: Style rule for map*/
+    .map{
+        width: 500px;
+        height: 450px;
+    }
+
+}
+
+/*Media Query for Desktop Viewport*/
+@media screen and (min-width: 1025px),print{
+
+/*Desktop Viewport: Style rule for header*/
+header{
+    padding : 2%;
+}
+
+
+/*Desktop Viewport: Style rules for main content*/
+#info ul{
+    margin-left:5%;
+}
+
+main h3{
+    font-size: 1.5em;
+}
+
+#piano,#guitar,#violin{
+    width: 29%;
+    float:left;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.mobile{
+    display: none;
+}
+
+.tablet{
+    display: none;
+}
+
+}
+
+/*Viewport for mobile*/
+@media screen and (max-width: 768px) {
+    .desktop,.tablet{
+        display : none;
+    }
+}
+
+.aboutimg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#about h1,#about h3{
+    text-align: center;
+}
+
+#about h1{
+    margin-top: 13vh;
+}
+
+#about p, .mobile p, .tablet p {
+    line-height: 1.6;
+    color: #FFF;
+    font-size : 1.25em;
+    font-family: 'DM Serif Display', serif;
+}
+
+.tablet, .desktop{
+    background: url("../images/story.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vh 3vw;
+    color: #FFF;
+    height: 100vh;
+}
+
+.tablet{
+    background: url("../images/story.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vh 3vw;
+    color: #FFF;
+    height: 100vw;
+}
+
+.mobile{
+    background: url("../images/story.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vh 3vw;
+    color: #FFF;
+    
+}
+
+   #about ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    #about li {
+        display: inline-block;
+        margin: 5px; 
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        color : #444;
+    }
+
+    #about li:hover {
+        display: inline-block;
+        margin: 5px; 
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        color : #FF4;
+        box-shadow: 3px 3px 5px rgba(255, 255, 68, 1)
+
+    }
+
+.aboutimg {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
