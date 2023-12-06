@@ -1,27 +1,33 @@
+<!-- 
+Author : Nitesh Hebbare
+Date   : 5th December 2023 -->
+
 <!DOCTYPE html>
-<!--
-    Student Name : Nitesh Hebbare
-    File Name : training.html
-    Date : 18-10-2023
--->
 <html lang="en">
 <head>
-    <title>Round: traning</title>
+    <title>RoundSharp: Training</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/trainings.css"> <!-- Link to the new training.css stylesheet -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
+    
+    <script src="scripts/script.js">
+    </script>
 </head>
 <body>
 
     <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Unicode character for hamburger icon -->
+        </div>
         <h1><a class="title" href="index.html"><img alt="roundsharp-logo" class="company-logo" src="images/logo.png"/>RoundSharp</a></h1>
     </header>
 
-      <!--use the nav area to add hyperlinks to other pages within the website-->
-      <nav>
+    <!-- Navigation Area -->
+    <nav class="desk">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -35,33 +41,154 @@
         </ul>
     </nav>
 
-<!-- Use the main area to add the main content to the webpage -->
-    <main>
-        <div>
-            <h3 class="header-member">We also provide trainings such as</h3>
-            <ul >
-                <li><img class="aboutimg" src="images/training.jpg" alt="training" >
-                    <h4 style="text-align: center;">General Training</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-                <li><img class="aboutimg" src="https://plus.unsplash.com/premium_photo-1661591368644-4103be17be52?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="machine" >
-                    <h4 style="text-align: center;">CNC machine </h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-                <li><img class="aboutimg" src="images/cutting-training.jpg" alt="cutting-training" >
-                    <h4 style="text-align: center;">Cutting Training</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-                <li><img class="aboutimg" src="images/safety.jpg" alt="safety" >
-                    <h4 style="text-align: center;">Safety Training</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-            </ul>
+    <nav class="ham">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="component.html">Components</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="specials.html">Specials</a></li>
+            <li><a href="trainings.html">Training</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="training">
+        
+        <div class="regular">
+           
+            <table class="training-table">
+                <caption> <h1>Product Training Schedule</h1></caption>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Length</th>
+                        <th>Room</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/circularsaw.jpg" alt="Circular Saw Training"></td>
+                        <td>2023-12-01</td>
+                        <td>$199.99</td>
+                        <td>2 hours</td>
+                        <td>Room A</td>
+                        <td>John Doe</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/JigsawTraining.jpg" alt="Jigsaw Training"></td>
+                        <td>2023-12-05</td>
+                        <td>$149.99</td>
+                        <td>1.5 hours</td>
+                        <td>Room B</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/ReciprocatingSaw.jpg" alt="Reciprocating Saw Training"></td>
+                        <td>2023-12-10</td>
+                        <td>$179.99</td>
+                        <td>1.8 hours</td>
+                        <td>Room C</td>
+                        <td>Mike Johnson</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/BandSaw.jpg" alt="Band Saw Training"></td>
+                        <td>2023-12-15</td>
+                        <td>$129.99</td>
+                        <td>1.2 hours</td>
+                        <td>Room D</td>
+                        <td>Susan Williams</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/MiterSawTraining.jpg" alt="Miter Saw Training"></td>
+                        <td>2023-12-20</td>
+                        <td>$219.99</td>
+                        <td>2.5 hours</td>
+                        <td>Room E</td>
+                        <td>David Brown</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/ScrollSawTraining.jpg" alt="Scroll Saw Training"></td>
+                        <td>2023-12-25</td>
+                        <td>$189.99</td>
+                        <td>2 hours</td>
+                        <td>Room F</td>
+                        <td>Emily Davis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/Tile Saw.jpg" alt="Tile Saw Training"></td>
+                        <td>2023-12-30</td>
+                        <td>$159.99</td>
+                        <td>1.5 hours</td>
+                        <td>Room G</td>
+                        <td>Chris Miller</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/ChopSawTraining.jpg" alt="Chop Saw Training"></td>
+                        <td>2024-01-05</td>
+                        <td>$249.99</td>
+                        <td>2.8 hours</td>
+                        <td>Room H</td>
+                        <td>Emma Wilson</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/PlungeSaw.jpg" alt="Plunge Saw Training"></td>
+                        <td>2024-01-10</td>
+                        <td>$169.99</td>
+                        <td>1.7 hours</td>
+                        <td>Room I</td>
+                        <td>Michael Lee</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/TrackSaw.jpg" alt="Track Saw Training"></td>
+                        <td>2024-01-15</td>
+                        <td>$199.99</td>
+                        <td>2 hours</td>
+                        <td>Room J</td>
+                        <td>Amy Taylor</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/HandheldCircularSawTraining.jpg" alt="Handheld Circular Saw Training"></td>
+                        <td>2024-01-20</td>
+                        <td>$189.99</td>
+                        <td>1.8 hours</td>
+                        <td>Room K</td>
+                        <td>Robert Clark</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><img class="product-image" src="images/trainings/ConcreteSawTraining.jpg" alt="Concrete Saw Training"></td>
+                        <td>2024-01-25</td>
+                        <td>$219.99</td>
+                        <td>2.5 hours</td>
+                        <td>Room L</td>
+                        <td>Sophia Garcia</td>
+                    </tr>               
+                </tbody>
+            </table>
+
+            <p>Join our circular saw-related training sessions to enhance your skills and knowledge. Our expert instructors will guide you through the latest technologies and techniques.</p>
         </div>
     </main>
 
-
     <footer>
         <p>&copy; Copyright 2099. All Rights Reserved.</p>
-        <p>Request information</p>
         <p>Nitesh Hebbare &nbsp;&nbsp;c0901466</p>
-        <p><a href="mailto:roundsharp@business.org">Requestinformation</a></p>
+        <p><a href="mailto:roundsharp@business.org" id="foot-mail">@Request information</a></p>
     </footer>
 </body>
 </html>

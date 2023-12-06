@@ -1,28 +1,33 @@
+<!-- 
+Author : Nitesh Hebbare
+Date   : 5th December 2023 -->
+
 <!DOCTYPE html>
-<!--
-    Student Name : Nitesh Hebbare
-    File Name : specials.html
-    Date : 18-10-2023
--->
 <html lang="en">
 <head>
     <title>RoundSharp: Specials</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/specials.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto&display=swap" rel="stylesheet">
+    
+    <script src="scripts/script.js">
+    </script>
 </head>
 <body>
 
     <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Unicode character for hamburger icon -->
+        </div>
         <h1><a class="title" href="index.html"><img alt="roundsharp-logo" class="company-logo" src="images/logo.png"/>RoundSharp</a></h1>
     </header>
 
-
-    <!--use the nav area to add hyperlinks to other pages within the website-->
-    <nav>
+    <!-- Navigation Area -->
+    <nav class="desk">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -35,64 +40,91 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <nav class="ham">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="component.html">Components</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="specials.html">Specials</a></li>
+            <li><a href="trainings.html">Training</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <div class="tab-desk">
-        <img src="images/special-banner.jpg" alt="banner">
+        <h1>Product of the week</h1>
+        <h2>Steel Saw</h2>
+        <img src="images/hero-roundsaw.jpg" alt="banner">
+        <p>The RoundSharp Steel Saw is the epitome of precision and power. Crafted with cutting-edge technology and high-quality materials, this tool is designed for professionals who demand nothing but the best.</p>
     </div>
 
-<!-- Use the main area to add the main content to the webpage -->
-    <main>
-        <div id="info">
-            <h2 style="text-align: center;">Product of the week: Steel Saw</h2>
-            <img class="aboutimg" src="images/img1.jpg" alt="Steel Saw" >
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore perferendis repellendus quae dignissimos aut! Architecto, nam nobis. Porro, omnis magni molestias quis ea, maiores harum accusamus sit perspiciatis officiis minima?
-            </p>
-            <h3>Weekly Sale items:</h3>
-            <ul>
-                <li><img style="width:200px; height: 200px; border-radius: 5px;" src="images/img4.jpg" alt="Metal-Cutting Circular Saw" >
-                    <h4 style="display: inline;">Metal-Cutting Circular Saw</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-                <li><img style="width:200px; height: 200px; border-radius: 5px;" src="images/Cordless Circular Saw.jpeg" alt="Cordless Circular Saw" >
-                    <h4 style="display: inline;">Cordless Circular Saw</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-                <li><img style="width:200px; height: 200px; border-radius: 5px;" src="images/Blade.png" alt="Blade" >
-                    <h4 style="display: inline;">Blade</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-            </ul>
-
-            <h3>
-               Guaranteed Benefits!!
-            </h3>
-            <img style=" width:100%; height:25em; border-radius: 5px;" src="images/guranteed.jpg" alt="guranteed" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eius vero, consequuntur ex, obcaecati voluptates dolorum non quas et delectus nostrum provident quidem,<b>dignissimos blanditiis illum! Eum accusamus porro totam?</b></p> 
+    <main id="specials">
+        <div>
+            <h1>Weekly Sale items</h1>
+            <ul id="weekly-sales">
+                <li>
+                    <img src="images/img4.jpg" alt="Metal-Cutting Circular Saw">
+                    <h4>Metal-Cutting Circular Saw</h4>
+                    <p>Elevate your metalworking projects with our Metal-Cutting Circular Saw. Crafted for precision and efficiency, this saw is perfect for a range of applications, from metal fabrication to home improvement tasks</p>
+                </li>
             
+                <li>
+                    <img src="images/Cordless Circular Saw.jpeg" alt="Cordless Circular Saw">
+                    <h4>Cordless Circular Saw</h4>
+                    <p>Experience freedom and flexibility with our Cordless Circular Saw. Designed for convenience without compromising performance, this saw is perfect for various cutting tasks</p>
+                </li>
+                <li>
+                    <img src="images/Blade.png" alt="Blade">
+                    <h4>Blade</h4>
+                    <p>Unlock the full potential of your cutting tools with our premium Blades. Precision-engineered for superior cutting performance, these blades are essential accessories for any cutting application.</p>
+                </li>
+            </ul>
             <div>
-                <h3>Why you should buy our products</h3>
+                <h1 class="guaranteed-content">Guaranteed Benefits!!</h1>
+                <img id="guaranteed" src="images/guranteed.jpg" alt="guaranteed">
+                <p class="guaranteed-content-text" > Reliability Our products are crafted with precision and built to last, ensuring consistent performance,
+                    Performance Achieve optimal results with cutting-edge technology and advanced features in every product,
+                    Satisfaction We prioritize customer satisfaction, offering products that exceed expectations</p>
+            </div>
+            <div id="reason-buy">
+                <h1>Why you should buy our products</h1>
                 <ul>
-                    <li><img style="width:200px; height: 200px; border-radius: 5px;" src="images/value.jpg" alt="value" >
-                        <h4 style="display: inline;">Value for money</h4>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-                    <li><img style="width:200px; height: 200px; border-radius: 5px;" src="https://plus.unsplash.com/premium_photo-1686758083874-3b7dccc8a022?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Durable" >
-                        <h4 style="display: inline;">Durable</h4>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-                    <li><img style="width:200px; height: 200px; border-radius: 5px;" src="images/quality.jpg" alt="quality" >
-                        <h4 style="display: inline;">Quality</h4>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-                    <li><img style="width:200px; height: 200px; border-radius: 5px;" src="images/material.jpg" alt="material" >
-                        <h4 style="display: inline;">Material</h4>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum obcaecati incidunt, quas dicta adipisci commodi, dolores aspernatur accusamus voluptatem nesciunt illum tempora aliquam molestias laboriosam quod excepturi. Veniam, repellendus iste.</li>
-    
+                    <li>
+                        <img src="images/value.jpg" alt="value">
+                        <h4>Value for Money</h4>
+                        <p>Get the most out of your investment with RoundSharp products. We offer unparalleled value for money, combining affordability with top-notch quality.</p>
+                    </li>
+                    <li>
+                        <img src="https://plus.unsplash.com/premium_photo-1686758083874-3b7dccc8a022?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Durable">
+                        <h4>Durable</h4>
+                        <p>RoundSharp products are built to withstand the test of time. Experience durability that ensures longevity and consistent performance throughout their lifecycle.</p>
+                    </li>
+                    <li>
+                        <img src="images/quality.jpg" alt="quality">
+                        <h4>Quality</h4>
+                        <p>Quality is at the heart of our products. Each RoundSharp item undergoes rigorous quality control, delivering excellence in design, construction, and performance.</p>
+                    </li>
+                    <li>
+                        <img src="images/material.jpg" alt="material">
+                        <h4>High-Quality Materials</h4>
+                        <p>RoundSharp products are crafted using premium materials, guaranteeing reliability and performance. Elevate your experience with top-tier materials that make a difference.</p>
+                    </li>
                 </ul>
-    
+            </div>
+
             </div>
         </div>
     </main>
 
-
     <footer>
         <p>&copy; Copyright 2099. All Rights Reserved.</p>
-        <p>Request information</p>
         <p>Nitesh Hebbare &nbsp;&nbsp;c0901466</p>
-        <p><a href="mailto:roundsharp@business.org">Requestinformation</a></p>
+        <p><a href="mailto:roundsharp@business.org" id="foot-mail">@Request information</a></p>
     </footer>
+
 </body>
 </html>

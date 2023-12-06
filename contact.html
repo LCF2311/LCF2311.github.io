@@ -1,27 +1,36 @@
+<!-- 
+Author : Nitesh Hebbare
+Date   : 5th December 2023 -->
+
 <!DOCTYPE html>
-<!--
-    Student Name : Nitesh Hebbare
-    File Name : contact.html
-    Date : 18-10-2023
--->
 <html lang="en">
+
 <head>
     <title>RoundSharp: Contact</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto&display=swap" rel="stylesheet">
+    
+    <script src="scripts/script.js">
+    </script>
+ </head>
+
 <body>
 
     <header>
-        <h1><a class="title" href="index.html"><img alt="roundsharp-logo" class="company-logo" src="images/logo.png"/>RoundSharp</a> </h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Unicode character for hamburger icon -->
+        </div>
+        <h1><a class="title" href="index.html"><img alt="roundsharp-logo" class="company-logo" src="images/logo.png"/>RoundSharp</a></h1>
     </header>
 
-    <!--use the nav area to add hyperlinks to other pages within the website-->
-    <nav>
+    <!-- Navigation Area -->
+    <!-- Navigation Area -->
+    <nav class="desk">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -34,24 +43,65 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-<!-- Use the main area to add the main content to the webpage -->
-    <main>
-                 <div id="contact">
-                 <h2>Lets connect today!</h2>
-                 <p class="tel-link mobile"><a href="tel:8372618362">(837) 261-8362</a></p>
-                 <p class="tab-desk">(837) 261-8362</p>
-                 <p>Email: <a class="email-link" href="mailto:roundsharp@business.org">mailto:roundsharp@business.org</a></p>
-                 <p>We are located at: London Road, Sarnia</p> 
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2919.0051730354267!2d-82.37747298821884!3d42.978164671021766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8825834655b89e31%3A0xb1fbf5571024a938!2sLondon%20Rd%2C%20Sarnia%2C%20ON!5e0!3m2!1sen!2sca!4v1697674359546!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+
+    <nav class="ham">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="component.html">Components</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="specials.html">Specials</a></li>
+            <li><a href="trainings.html">Training</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>       
+        <div id="contact">
+            <h2>We are located at: London Road, Sarnia</h2> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2919.0051730354267!2d-82.37747298821884!3d42.978164671021766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8825834655b89e31%3A0xb1fbf5571024a938!2sLondon%20Rd%2C%20Sarnia%2C%20ON!5e0!3m2!1sen!2sca!4v1697674359546!5m2!1sen!2sca" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form>
+                <fieldset>
+                    <legend><h2>Contact Us</h2></legend>
+
+                    <ol>
+                        <li>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </li>
+
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </li>
+
+                        <li>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </li>
+
+                        <li>
+                            Subscribe to newsletter:
+                            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                        </li>
+                    </ol>
+
+                    <button type="submit">Submit Request</button>
+                    <button type="reset">Reset Form</button>
+                </fieldset>
+            </form>
+        </div>
     </main>
 
-
+    <!-- Footer -->
     <footer>
         <p>&copy; Copyright 2099. All Rights Reserved.</p>
-        <p>Request information</p>
         <p>Nitesh Hebbare &nbsp;&nbsp;c0901466</p>
-        <p><a href="mailto:roundsharp@business.org">Requestinformation</a></p>
+        <p><a href="mailto:roundsharp@business.org" id="foot-mail">@Request information</a></p>
     </footer>
 </body>
+
 </html>
