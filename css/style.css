@@ -1,6 +1,6 @@
 /*
 Author : Nitesh Hebbare
-Date   : 18th October 2023
+Date   : 5th December 2023
 File Name : style.css
 */
 
@@ -11,61 +11,90 @@ body, header,nav,main,footer,img,h1,ul{
     border : 0;
 }
 
+body {
+    font-size: medium;
+    font-family: 'DM Serif Display', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e3f0d1;
+    color: #333;
+}
+
 /*Style rule for images*/
-img{
+.hero-image {
     width: 100%;
-    height: 35em;
-    display: block;
+    height: 81vh;
 }
 
 
 /*Hide tab-desk class*/
-
 .tab-desk{
-    display: none;
+    display: block;
 }
-
 /* Style rules for header content */
-header{
+
+header {
+    background-color: #222;
+    padding: 20px;
     text-align: center;
     font-size: 1.5em;
     color : #be8a2f;
 }
 
+
 header h1{
-    font-family: 'Serif Display', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 /* Style rules for navigation area*/
-nav{
-    background-color: #b3b609;
+
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
 
-nav ul{
-    list-style-type : none;
+.desk ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     text-align:center;
 }
 
-nav li{
-    display: block;
-    font-size: 2em;
-    border-top: 1px solid #abf02b;
+.ham ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align:center;
 }
 
-nav li a {
+.ham li {
     display: block;
-    color : #fff;
+    margin: 0 10px;
+}
+
+.desk li {
+    display: block;
+    margin: 0 10px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
     text-align: center;
     padding : 0.5em 1em;
-    text-decoration: none;
 }
 
 /* Style rules for main content*/
 main{
-    padding : 2%;
     background-color: #e3f0d1;
     overflow: auto;
-    font-family: 'Roboto', sans-serif;    
+    font-family: 'DM Serif Display', serif;
 }
 
 main p {
@@ -76,20 +105,6 @@ main p {
     font-size : 1.25em;
     color:#373634;
     font-weight: bold;
-}
-
-#piano, #guitar, #violin{
-    margin: 0.2%;
-}
-
-#info{
-    clear :left;
-    background-color: #e1eac4;
-    padding: 1% 2%;
-}
-
-#info ul{
-    margin-left:10%;
 }
 
 .round{
@@ -136,112 +151,27 @@ footer{
 }
 
 footer a {
-    color :  #949849;;
     text-decoration: none;
 }
 
-/* Media Query for Tablet Viewport*/
-@media screen and (min-width: 550px),print{
-    /*Tablet Viewport: Show tab-desk class, hide mobile class*/
-    .tab-desk{
-        display: block;
-    }
-
-    .mobile{
-        display: none;
-    }
-
-    /*Tablet Viewport: Style for header content*/
-    span.tab-desk{
-        display: inline;
-    }
-
-    /* Tablet Viewport : Style rules for nav area*/
-    nav li{
-        border-top:none;
-        display: inline-block;
-        font-size: 1.5em;
-        border-right: 1px solid #b3f804;
-    }
-
-    nav li:last-child{
-        border-right: none;
-    }
-
-    nav li a{
-        padding-top: 0.25em;
-        padding-bottom: 0.25em;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-    }
-
-    /* Table Viewport: Style rule for map*/
-    .map{
-        width: 500px;
-        height: 450px;
-    }
-
+footer {
+    background-color: #333;
+    color : #949849;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
 }
-
-/*Media Query for Desktop Viewport*/
-@media screen and (min-width: 769px),print{
-
-/*Desktop Viewport: Style rule for header*/
-header{
-    padding : 2%;
-}
-
-/*Desktop Viewport: Style rules for nav area*/
-nav li a{
-    padding-top: 0.5em;
-    padding-bottom:0.5em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-}
-
-nav li a:hover{
-    color: #485e06;
-    background-color: #e5e9fc;
-}
-
-/*Desktop Viewport: Style rules for main content*/
-#info ul{
-    margin-left:5%;
-}
-
-main h3{
-    font-size: 1.5em;
-}
-
-#piano,#guitar,#violin{
-    width: 29%;
-    float:left;
-    margin-top:0;
-    margin-bottom:0;
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
-}
-
-/* Media Query for Print */
+/* Media Query for Print*/
 @media print {
 body{
     background-color: #fff;
     color:#000;
 }
-}
+} 
 
 .title{
     text-decoration: none;
     color:#b3b609;
-}
-
-.aboutimg{
-    width:30em;
-    height:25em;
-    margin: auto;
-    border-radius: 5%;
 }
 
 .company-logo{
@@ -256,6 +186,202 @@ ul{
   list-style-type: none;
 }
 
-ol{
-    list-style-type: lower-roman;
+
+
+.component {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.component li {
+    width: 30%; 
+    margin-bottom: 20px; 
+}
+
+/*Pseudo Classes*/
+nav a:hover {
+    color: #485e06;
+    background-color: #e5e9fc;
+}
+
+.desk li{
+    border-top:none;
+    display: inline-block;
+    font-size: 1.5em;
+    border-right: 1px solid #b3f804;
+}
+
+
+.ham li{
+    border-top:none;
+    display: block;
+    font-size: 1.5em;
+    border-bottom: 1px solid #b3f804;
+}
+
+.ham li:last-child{
+    border-bottom: none;
+}
+
+.desk li:last-child{
+    border-right: none;
+}
+
+nav li a{
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+/* Table Viewport: Style rule for map*/
+.map{
+    width: 500px;
+    height: 450px;
+}
+
+.company-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+#intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#foot-mail{
+    color:#949849;
+}
+
+p{
+    font-family: 'DM Serif Display', serif;
+}
+
+button{
+    font-family: 'DM Serif Display', serif;
+}
+
+.desk {
+    display: block;
+}
+
+.ham {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+        /* Responsive styles for mobile viewport*/
+        @media screen and (max-width: 768px) {
+            .ham {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .ham.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+           .desk{
+                display: none;
+            }
+        }
+
+#component {
+    padding: 40px;
+    text-align: center;
+}
+
+.component {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.component li {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.component li:hover {
+    transform: scale(1.05);
+}
+
+.component img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.component h3 {
+    margin-top: 15px;
+}
+
+.component p {
+    color: #666;
+}
+
+#FAQ ul {
+    list-style: none;
+    padding: 0;
+}
+
+#FAQ li {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#FAQ li:hover {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+#FAQ li:first-child {
+    margin-top: 0;
+}
+
+#media {
+    text-align: center;
+    padding: 20px;
+}
+
+audio,
+video {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+video {
+    height: auto; 
 }
